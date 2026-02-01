@@ -74,7 +74,7 @@
 }
 .scroll-indicator {
     position: absolute;
-    bottom: -30px;
+    bottom: -35px;
     left: 50%;
     transform: translateX(-50%);
     background: #fff;
@@ -85,23 +85,49 @@
     align-items: center;
     justify-content: center;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+.scroll-indicator::before, .scroll-indicator::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    width: 25px;
+    height: 25px;
+    background: transparent;
 }
 
-.scroll-indicator .scroll-icon {
- font-size: 18px;
- z-index: 3;
- color: #ef2d2d;
+.scroll-indicator::before {
+    left: -24px;
+    border-radius: 0 25px 0 0;
+    box-shadow: 10px -10px 0 0 #ef2d2d;
 }
 
-.scroll-indicator {
+.scroll-indicator::after {
+    right: -24px;
+    border-radius: 25px 0 0 0;
+    box-shadow: -10px -10px 0 0 #ef2d2d;
+}
+
+.scroll-icon {
+    font-size: 20px;
+    color: #ef2d2d;
+    animation: bounceicon 1.6s infinite;
+}
+
+@keyframes bounceicon {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* .scroll-indicator {
   animation: bounce 1.6s infinite;
   cursor: pointer;
-}
+} */
 
-@keyframes bounce {
+/* @keyframes bounce {
   0%,100% { transform: translateY(0); }
   50% { transform: translateY(10px); }
-}
+} */
 
 .chip {
     z-index: 2;

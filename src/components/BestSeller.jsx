@@ -2,7 +2,7 @@
 
 function BestSeller({ Open }) {
     return (
-       <section className={`best-seller ${Open ? "Open" : ""}`}>
+       <section id="best-seller" className={`best-seller ${Open ? "Open" : ""}`}>
         <div className="best-seller-inner">
             <h2>Best Seller</h2>
 

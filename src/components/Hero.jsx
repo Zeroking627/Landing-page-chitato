@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import {faArrowRight, faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import Chip1 from '../assets/Chip-1.png'
 import chip2 from '../assets/Chip-2.png'
@@ -84,7 +84,7 @@ function Hero({Open, setOpen}) {
 
                 </div>
                 <div className="scroll-indicator" onClick={() => setOpen(!Open)}> 
-                    <FontAwesomeIcon  className="scroll-icon" icon={Open ? faArrowUpRightFromSquare : faArrowRight} />
+                    <FontAwesomeIcon  className="scroll-icon" icon={Open ? faArrowUpRightFromSquare : faArrowUp} />
                 </div>
 
             </div>
