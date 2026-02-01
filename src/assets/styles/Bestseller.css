@@ -1,0 +1,14 @@
+.best-seller {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.7s ease, opacity 0.4s ease;
+  opacity: 0;
+}
+
+.best-seller.Open {
+  max-height: 200vh;
+  opacity: 1;
+}
+.best-seller-inner{
+  padding: 80px 40px;
+}

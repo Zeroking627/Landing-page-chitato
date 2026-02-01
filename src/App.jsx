@@ -1,19 +1,19 @@
 import Navbar from './components/Navbar.jsx'
 import Hero from './components/Hero.jsx'
 import BestSeller from './components/BestSeller.jsx'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 
 
 function App() {
-  const bestSellerRef = useRef(null);
+  const [Open, setOpen] = useState(false);
 
  return (
   <div>
     <Navbar />
-    <Hero bestSellerRef={bestSellerRef} />
-    <BestSeller bestSellerRef={bestSellerRef} />
+    <Hero Open={Open} setOpen={setOpen} />
+    <BestSeller Open={Open} />
   </div>
  )
 }
 
-export default App
+export default App;

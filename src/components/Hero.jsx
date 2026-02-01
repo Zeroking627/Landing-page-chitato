@@ -17,7 +17,7 @@ const chip =  Array.from({ length: Chip_count }, (_, i) => {
     const chipImages = [Chip1, chip2, chip3, chip4];
     return chipImages[i % chipImages.length];
 });
-function Hero(bestSellerRef) {
+function Hero({Open, setOpen}) {
     const chipRefs = useRef([]);
 
     useEffect(() => {
@@ -45,11 +45,6 @@ function Hero(bestSellerRef) {
         });
     }, []);
     
-
-    const scrollToBestSeller = () => {
-    
-    };
-
     return (
         <section className="hero">
             {chip.map((chip, index) => (
@@ -88,8 +83,8 @@ function Hero(bestSellerRef) {
                     <img src={ChitatoNori} className='Product Nori' alt="CHITATO LITE NORI" />
 
                 </div>
-                <div className="scroll-indicator" onClick={scrollToBestSeller}> 
-                    <FontAwesomeIcon className="scroll-icon" icon={faArrowUpRightFromSquare} />
+                <div className="scroll-indicator" onClick={() => setOpen(!Open)}> 
+                    <FontAwesomeIcon  className="scroll-icon" icon={Open ? faArrowUpRightFromSquare : faArrowRight} />
                 </div>
 
             </div>

@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import './assets/styles/hero.css'
 import './assets/styles/navbar.css'
+import './assets/styles/bestseller.css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

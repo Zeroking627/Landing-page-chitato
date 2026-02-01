@@ -1,10 +1,13 @@
 
 
-function BestSeller({ bestSellerRef }) {
+function BestSeller({ Open }) {
     return (
-        <div ref={bestSellerRef} className="component">
-           <h1>aisnias</h1>
+       <section className={`best-seller ${Open ? "Open" : ""}`}>
+        <div className="best-seller-inner">
+            <h2>Best Seller</h2>
+
         </div>
+       </section>
     );
 
 }
