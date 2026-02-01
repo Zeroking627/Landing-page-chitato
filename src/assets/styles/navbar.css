@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(6px);
+   height: 80px;
+   background: linear-gradient(90deg, #e11d2e, #f44336);
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 0 100px;
+   color: #fff;
+   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.nav-left{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo{
+    height: 50px;
+    background-color: #fff;
+    border-radius: 80px;
+}
+
+.brand{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-menu{
+    list-style: none;
+    display: flex;
+    gap: 36px;
+}
+
+.nav-menu li a{
+    position: relative;
+   text-decoration: none;
+   color: #fff;
+   font-size: 14px;
+   font-weight: 500;
+   padding: 6px 0;
+}
+
+nav-menu li a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width 0.3s ease;
+}
+
+.nav-menu li a:hover::after{
+    width: 100%;
+}
+
+
+.nav-menu .chevrondown{
+    height: 10px;
+    margin-left: 5px;
+    margin-bottom: 3px;
+    color: #FFA240;
+}
+

@@ -1,0 +1,153 @@
+.hero {
+    background: #ef2d2d;
+    min-height: 89.9vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.hero-container {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.hero-text {
+    color: #fff;
+    max-width: 600px;
+}
+.hero-text h1 {
+    font-size: 64px;
+    line-height: 1.1;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.hero-text p {
+    font-size: 16px;
+    opacity: 0.9;
+    line-height: 1.6;
+    margin-bottom: 32px;
+}
+.hero-btn{
+    background: #ffd600;
+    color: #111;
+    border: none;
+    padding: 14px 26px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.hero-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+.hero-image {
+    position: relative;
+    width: 420px;
+    height: 420px;
+}
+.Product{
+    position: absolute;
+    width: 260px;
+    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.3));
+    transition: transform 0.4s ease;
+}
+.Product.BBQ {
+    left: 0;
+    bottom: 0;
+    transform: rotate(-8deg);
+}
+.Product.Nori {
+    right: 0;
+    top: 0;
+    transform: rotate(8deg);
+}
+.scroll-indicator {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-indicator .scroll-icon {
+ font-size: 18px;
+ z-index: 3;
+ color: #ef2d2d;
+}
+
+.scroll-indicator {
+  animation: bounce 1.6s infinite;
+  cursor: pointer;
+}
+
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+.chip {
+    z-index: 2;
+    position: absolute;
+    width: 60px;
+    pointer-events: none;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+    will-change: transform ;
+}
+
+/* .chip-1 {
+    top: 15%;
+    left: 45%;
+    animation-delay: 0s;
+}
+
+.chip-2 {
+    top: 35%;
+    left: 60%;
+    width: 50px;
+    animation-delay: 1.5s;
+}
+
+.chip-3 {
+    top: 20%;
+    left: 60%;
+    width: 60px;
+    animation-delay: 3s;
+}
+
+.chip-4 {
+    top: 50%;
+    right: 15%;
+    width: 45px;
+    animation-delay: 4.5s;
+}
+
+.hero:hover .chip {
+    animation-play-state: paused;
+} */
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url(/src/assets/Pattern-BG.png) no-repeat center center/cover;
+    opacity: 0.1;
+    z-index: 1;
+}
