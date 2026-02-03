@@ -45,6 +45,26 @@ function Hero({Open, setOpen}) {
         });
     }, []);
     
+    const handleToggleAndScroll = () => {
+        if (!Open) {
+        setOpen(true);
+
+        setTimeout(() => {
+        const bestSellerSection = document.getElementById('best-seller');
+        if(bestSellerSection) {
+            bestSellerSection.scrollIntoView({ behavior: 'smooth' , block: 'start' } );
+        }
+    }
+    , 150);
+    } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        setTimeout(() => {
+            setOpen(false);
+        }, 500);
+    }
+}
+    
     return (
         <section className="hero">
             {chip.map((chip, index) => (
@@ -56,6 +76,7 @@ function Hero({Open, setOpen}) {
                     alt="chip"
                 />
             ))}
+
             {/* <img src={Chip1} className='chip chip-1' alt="" />
             <img src={chip2} className='chip chip-2' alt="" />
             <img src={chip3} className='chip chip-3' alt="" />
@@ -83,7 +104,7 @@ function Hero({Open, setOpen}) {
                     <img src={ChitatoNori} className='Product Nori' alt="CHITATO LITE NORI" />
 
                 </div>
-                <div className="scroll-indicator" onClick={() => setOpen(!Open)}> 
+                <div className="scroll-indicator" onClick={handleToggleAndScroll}> 
                     <FontAwesomeIcon  className="scroll-icon" icon={Open ? faArrowUpRightFromSquare : faArrowUp} />
                 </div>
 

@@ -1,6 +1,7 @@
 .hero {
     background: #ef2d2d;
-    min-height: 89.9vh;
+    width: 100%;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     position: relative;
@@ -88,7 +89,6 @@
     cursor: pointer;
 }
 .scroll-indicator::before, .scroll-indicator::after {
-    content: '';
     position: absolute;
     top: 5px;
     width: 25px;
@@ -111,6 +111,7 @@
 .scroll-icon {
     font-size: 20px;
     color: #ef2d2d;
+    transform: rotate(45deg);
     animation: bounceicon 1.6s infinite;
 }
 
