@@ -17,7 +17,7 @@ function BestSeller({ Open }) {
        <section id="best-seller" className={`best-seller ${Open ? "Open" : ""}`}>
         <div className="section-header">
             <h2>Best Sellers.</h2>
-            <a href="#">Shop all <FontAwesomeIcon icon={faCircleChevronRight} /></a>
+            <a href="#">Shop all <FontAwesomeIcon className="arrow" icon={faCircleChevronRight} /></a>
         </div>
 
         <div className="product-grid">
@@ -43,6 +43,8 @@ function BestSeller({ Open }) {
                 </div>
             </div>
         </div>
+
+        
        </section>
     );
 

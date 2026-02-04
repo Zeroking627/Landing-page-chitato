@@ -50,6 +50,11 @@ html{
   font-size: 14px;
 }
 
+.section-header a .arrow {
+  vertical-align: middle;
+  color: #d62323;
+}
+
 .product-grid{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
